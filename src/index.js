@@ -10,13 +10,11 @@ import registerServiceWorker from './registerServiceWorker';
   var input, filter, table, tr, td, i;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
 
 
 
-  if(input==books.title){
-        document.getElementById("demo").innerHTML = input;
+  if(filter==books.title){
+        document.getElementById("demo").innerHTML = filter;
   }
 
 
