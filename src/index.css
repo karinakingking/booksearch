@@ -1,0 +1,23 @@
+#fullbook{
+	background-color: pink;
+	height: 100%;
+	width: 100%;
+}
+
+#root{
+	
+	background-color: violet;
+}
+
+
+td {
+	padding: 5px;
+    border:solid black 1px;
+    
+}
+
+img{
+	height: 200px;
+	width:200px;
+	position: center;
+}
