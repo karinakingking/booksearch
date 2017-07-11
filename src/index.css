@@ -1,13 +1,3 @@
-#fullbook{
-	background-color: pink;
-	height: 100%;
-	width: 100%;
-}
-
-#root{
-	
-	background-color: violet;
-}
 
 
 td {
@@ -17,7 +7,11 @@ td {
 }
 
 img{
-	height: 200px;
+	height: 300px;
 	width:200px;
 	position: center;
+}
+
+.btn{
+	margin-bottom: 5px;
 }

@@ -5,7 +5,7 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
    
 
-  function myFunction() {
+  function search() {
   // Declare variables 
   var input, filter, table, tr, td, i;
   input = document.getElementById("myInput");
@@ -13,7 +13,17 @@ import registerServiceWorker from './registerServiceWorker';
   table = document.getElementById("myTable");
   tr = table.getElementsByTagName("tr");
 
+
+
+  if(input==books.title){
+        document.getElementById("demo").innerHTML = input;
+  }
+
+
+
+
   // Loop through all table rows, and hide those who don't match the search query
+  /*
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[0];
     if (td) {
@@ -24,6 +34,7 @@ import registerServiceWorker from './registerServiceWorker';
       }
     } 
   }
+  */
 }
  
   
@@ -40,9 +51,10 @@ function Booksfunction() {
   <table id="myTable">
 
     <th>
-
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." />
-
+    <form action="index.html">
+    <input type="text" id="myInput" onkeyup="search()" placeholder="Search for books.." />
+    <input type="submit" name="sub_btn" value="submit" class="btn" />
+    </form>
 
     </th>
 
@@ -57,6 +69,26 @@ function Booksfunction() {
   			<td>{books.bookb.title}</td>
   			<td>{books.bookb.retailprice}</td>
   			</td>
+        <td>
+        <img src={books.bookc.bookcover}></img>
+        <td>{books.bookc.title}</td>
+        <td>{books.bookc.retailprice}</td>
+        </td>
+        <td>
+        <img src={books.bookd.bookcover}></img>
+        <td>{books.bookd.title}</td>
+        <td>{books.bookd.retailprice}</td>
+        </td>
+        <td>
+        <img src={books.booke.bookcover}></img>
+        <td>{books.booke.title}</td>
+        <td>{books.booke.retailprice}</td>
+        </td>
+        <td>
+        <img src={books.bookf.bookcover}></img>
+        <td>{books.bookf.title}</td>
+        <td>{books.bookf.retailprice}</td>
+        </td>
   			
   			
   	</tr>
@@ -89,8 +121,36 @@ var books = {
     "bookid":"02",
     "title":"Angels and Demons",
     "retailprice":"950",
-    "description":"Rebels: City of Indra is a 2014 science fiction or dystopian novel by Kendall Jenner, Kylie Jenner, and ghostwriter Maya Sloan.",
-    "bookcover": "http://t2.gstatic.com/images?q=tbn:ANd9GcSZmP2f6mPadWxTW2JBMimLeAlwRitaiG2EDzCY962XUpdmYpGy"},
+    "description":"",
+    "bookcover": "http://static.rogerebert.com/uploads/movie/movie_poster/angels-and-demons-2009/large_grN4lETrHNejatQZFP2F2DAWMU4.jpg"},
+
+    "bookc":{
+    "bookid":"03",
+    "title":"Inferno",
+    "retailprice":"850",
+    "description":"",
+    "bookcover": "http://www.sonypictures.com/movies/inferno/assets/images/onesheet.jpg"},
+
+    "bookd":{
+    "bookid":"04",
+    "title":"Da Vinci Code",
+    "retailprice":"900",
+    "description":"",
+    "bookcover": "https://upload.wikimedia.org/wikipedia/en/6/6b/DaVinciCode.jpg"},
+
+    "booke":{
+    "bookid":"05",
+    "title":"The Lost Symbol",
+    "retailprice":"1000",
+    "description":"",
+    "bookcover": "https://images-eu.ssl-images-amazon.com/images/I/51vFKUWpjHL._SX260_.jpg"},
+
+    "bookf":{
+    "bookid":"06",
+    "title":"Deception Point",
+    "retailprice":"350",
+    "description":"",
+    "bookcover": "http://images.gr-assets.com/books/1464198480l/30290195.jpg"},
 };
 
 
